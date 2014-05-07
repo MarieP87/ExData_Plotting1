@@ -7,7 +7,7 @@ data2 <- data1[which((data1$Date <= "2007-02-02")&(data1$Date >= "2007-02-01")),
 data2$DateTime <- strptime(paste(data2$Date, data2$Time), "%Y-%m-%d %H:%M:%S")
 
 ## Plot 4 ##
-png("plot4.png", width = 480, height = 480, units = "px")
+png("plot4.png", width = 480, height = 480, units = "px", bg = "transparent"))
 par(mfrow = c(2,2))
 # 1 #
 plot(data2$DateTime, data2$Global_active_power, type = "l", ylab = "Global Active Power", xlab = "")
